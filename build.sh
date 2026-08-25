@@ -35,7 +35,7 @@ make_debug_archive () {
 }
 
 EPOCH=$(date --utc +%s) # The epoch (only used to then construct the various date strings)
-VERSION_DATE=$(date --utc --date="@$EPOCH" --rfc-3339=seconds)
+VERSION_DATE=$(date --utc --date="@$EPOCH" +"%Y-%m-%d %H:%M")
 VERSION=$(date --utc --date="@$EPOCH" +%Y%m%d%H%M)
 OUTPUT="mkosi.output/kde-linux_$VERSION"   # Built rootfs path (mkosi uses this directory by default)
 
